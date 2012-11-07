@@ -12,9 +12,13 @@ class Student < ActiveRecord::Base
   validates_numericality_of :age, :greater_than_or_equal_to => 5
   attr_accessible :first_name, :last_name, :gender, :birthday, :email, :phone
 
-  def name
-    "#{first_name} #{last_name}"
-  end
+#  def name
+#    "#{first_name} #{last_name}"
+#  end
+
+#  def name=(input)
+#    name = input
+#  end
 
   def age
     Time.now.year - birthday.year
